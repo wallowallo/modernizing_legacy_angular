@@ -1,3 +1,4 @@
+//declaring variable for 3rd party script
 declare var angular: any;
 
 import {makeDirective, makeSelector} from './a1to2';
@@ -5,6 +6,7 @@ import {TimerComponent} from './controllers/timer';
 import ngRedux from 'ng-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
+
 
 angular.module('legacyApp', [ 'ts-hack', ngRedux ])
     .config(($ngReduxProvider: any) => {
@@ -20,6 +22,8 @@ angular.element(document).ready(function() {
 });
 
 console.log('we online');
+
+//properties with '?' behind are optional properties
 export interface Transaction {
   id?: any;
   type?: string;
